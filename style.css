@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    
+  } 
+section{
+    padding: 5rem 6.2rem;
+    
+    max-width: 1440px;
+  }
+  .container{
+    display: flex;
+      max-width: 730px;
+      
+      border-radius: 10px;
+      
+
+  }
+.picture{
+  max-width: 285px;
+ max-height: 285px;
+}
+.img_right{
+  border-radius: 10px 0 0 10px;
+  height: 100%;
+  
+}
+.right_text{
+  background-color: white;
+  padding: 42px ;
+  border-radius: 0 10px 10px 0;
+  max-height: 100%;
+}
+.header{
+  font: size 20px ;
+ 
+ 
+
+}
+.body{
+  color:hsl(212, 23%, 69%) ;
+  margin-top:15px ;
+  margin-bottom: 15px;
+  
+}
+.card{
+  display: flex;
+  justify-content: space-between;
+  
+  }
+  p{
+    color:hsl(212, 23%, 69%) ;
+    padding-top: 3px;
+  }
+.foto{display: flex;
+    
+}
+.img_foto{
+  margin-right: 20px;
+  border-radius: 50%;
+  width:  40px;
+  
+  
+}
+
+
+.menu{
+  
+  width: 32px;
+  height: 32px;
+  
+  background-color: hsl(210, 46%, 95%);
+  align-items: center;
+  border-radius: 50%;
+}
+.share{
+   transform: translate(50% , 50%);
+   border: none;
+   
+}
+.menu:active
+{ 
+  background-color: hsl(217, 19%, 35%);
+ }
+.share:active{
+  
+  overflow: hidden;
+  filter: brightness(3);
+  }
+
+  #check_label{ /*убирает с экрана check box, но имя остаёться на экране*/
+    display: none;
+  } 
+  
+  .block{
+    height: 0px;/*высота 0,.block сжимаеться, можно поставить display: none; блок исчезает с экрана*/
+    overflow: hidden;/*что бы текст не вылазил за края блока при сворачивании*/ 
+  }
+  
+  #check_label:checked ~ .block{/*если чек бокс с именим check_label нажат(checked) то к .block применяем следующий стиль*/
+    z-index: 0;
+    position: relative;
+    right: 105px;
+    bottom: 110px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;/*что бы текст не вылазил за края блока при разворачивании*/
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 250px;
+    height: 55px;
+    background: hsl(217, 19%, 35%);
+    transition: .3s;/*делает анимацию более плавной*/
+    padding-left: 35px;
+    padding-right: 35px;/*делает отступы длы текста внутри блока*/
+  }
+  
+  #check_label:checked ~ .arrow-down{
+    position: relative;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top: 10px solid hsl(217, 19%, 35%);
+    bottom: 110px;
+    left: 10px;
+  }
+  .link-schare{
+    text-decoration:none ;
+    color: hsl(212, 23%, 69%);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  
+  @media(max-width:800px){
+    section{width: 375px;
+      height: 665px;
+      padding: 75px 24px;
+  }
+    .container{
+      display: block;
+      width:330px ;
+      height: 505px;}
+    .picture{
+      width: 330px;
+      height: 200px;
+    }
+    
+    .img_right{
+      width: 330px;
+      height: 240px;
+      border-radius: 10px 10px 0 0;
+      background-size: cover;
+        
+    }
+    .right_text{
+      position: relative;
+      padding: 37px 37px 0px 37px;
+      height: 300px ;
+      justify-content: left;
+      border-radius: 0 0 10px 10px;
+      
+    }
+    h1{
+      font-size: 16px;
+    }
+    .body{
+      font-size: 13px;
+      margin-bottom: 25px;
+      line-height: 20px;
+    }
+    
+    #check_label:checked ~ .block{/*если чек бокс с именим check_label нажат(checked) то к .block применяем следующий стиль*/
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      overflow: hidden;/*что бы текст не вылазил за края блока при разворачивании*/
+      margin: 0 auto;
+      border-radius: 0 0 10px 10px;
+      width: 330px;
+      height: 65px;
+      background: hsl(217, 19%, 35%);
+      transition: .3s;/*делает анимацию более плавной*/
+      padding-left: 28px;
+      padding-right: 115px;/*делает отступы длы текста внутри блока*/
+      
+    }
+    #check_label:checked ~ .arrow-down{
+      display: none;
+    }
+    
+    .share{
+      position: relative;
+      z-index: 2;
+      
+    }
+    
+    
+
+  }
+  
